@@ -1,0 +1,349 @@
+/* ----------------------------------- Allgemien ---------------------------------- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a26;
+    color: #ffffff;
+    max-width: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.container-menu {
+    width: 100%;
+}
+
+/* ----------------------------------- Header ---------------------------------- */
+.main-header {
+    background: #1a1a26;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.header-text {
+    font-size: 1.2vw;
+    text-align: left;
+    padding: 10px;
+    border: 2px solid #fff;
+    border-radius: 25px 0 25px 0;
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.header-text a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.main-nav {
+    flex: 1;
+    text-align: right;
+}
+
+.main-nav ul {
+    font-size: 18px;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: right;
+    gap: 100px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.main-nav a {
+    font-weight: bold;
+    position: relative;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    transition: color 0.3s;
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #0077ff;
+    transition: width 0.3s;
+}
+
+.main-nav a:hover::after {
+    width: 100%;
+}
+
+/* ----------------------------------- Hauptbereich ---------------------------------- */
+main {
+    padding-top: 13%;
+}
+
+h2 {
+    top: 4%;
+    position: absolute;
+    font-size: 8vw;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #5d79f7;
+    z-index: -1;
+    animation: fadeIn 5s ease-out;
+}
+
+.gradient-text-h2 {
+    background: linear-gradient(180deg, #0077ff, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.container-menu p {
+    font-size: 23px;
+    line-height: 1.6;
+    text-align: center;
+    margin: 30px auto;
+    max-width: 800px;
+    padding-bottom: 20px;
+}
+
+.container-sub {
+    width: 100%;
+    height: 100%;
+}
+
+h3 {
+    margin: 20px auto;
+    width: 800px;
+}
+
+/* ----------------------------------- Listen ---------------------------------- */
+.container-menu ul {
+    list-style: none;
+    margin: 20px auto;
+    padding: 0;
+    max-width: 800px;
+}
+
+.container-menu ul li {
+    font-size: 18px;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #000;
+}
+
+.container-menu ul li:before {
+    content: "✓";
+    color: #5d79f7;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.container-highlights {
+    background-image: url(https://i.ibb.co/Xzs3GhX/black-Controller.jpg);
+    background-size: cover;
+    padding: 50px 0;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* ----------------------------------- Bilder ---------------------------------- */
+.tech-img,
+.application-img {
+    width: 80%;
+    max-width: 800px;
+    display: block;
+    margin: auto;
+    z-index: 1;
+}
+
+/* ----------------------------------- Footer ---------------------------------- */
+.main-footer {
+    background-color: #1a1a26;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+}
+
+.main-footer p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+    margin: 30px auto;
+    max-width: 800px;
+}
+
+.scroll-to-top {
+    color: white;
+    bottom: 20px;
+    right: 20px;
+    text-decoration: none;
+}
+
+.scroll-to-top:hover {
+    text-decoration: underline;
+}
+
+/* ----------------------------------- Animationen ---------------------------------- */
+a,
+button {
+    transition: all 0.5s ease;
+}
+
+.container-menu ul li {
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ----------------------------------- Hamburger-Menü ---------------------------------- */
+.menu-toggle {
+    display: none;
+}
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    width: 30px;
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+/* ----------------------------------- Media Query ---------------------------------- */
+
+/* ----------------------------------- Responsiv Design ---------------------------------- */
+
+@media (max-width: 767px) {
+    main {
+        padding-top: 50px;
+    }
+
+    h2 {
+        top: 5%;
+        animation: fadeIn 3s ease-out;
+    }
+}
+
+@media (max-width: 1024px) {
+    .main-nav {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #1a1a26;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.3s ease-in-out;
+    }
+
+    .main-nav ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 0;
+        padding: 20px 0;
+        gap: 15px;
+    }
+
+    .main-nav a {
+        color: #fff;
+        font-size: 18px;
+        text-decoration: none;
+    }
+
+    .menu-toggle:checked~.main-nav {
+        height: auto;
+        top: 70px;
+        background-color: #0077ff;
+        z-index: 2;
+    }
+
+    .hamburger-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container-highlights p,
+    h3 {
+        margin: 20px;
+    }
+
+    .container-highlights {
+        padding: 10px 0;
+        justify-items: center;
+    }
+
+    .container-menu ul li {
+        font-size: 17px;
+        margin: 10px 15px;
+        animation: none;
+    }
+
+    .main-footer {
+        padding: 0 20px;
+    }
+
+    /* ----------------------------------- Animation für das Hamburger-Menü ---------------------------------- */
+
+    .menu-toggle:checked+.hamburger-menu span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle:checked+.hamburger-menu span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle:checked+.hamburger-menu span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-text {
+        font-size: 1.5vw;
+    }
+
+    .container-menu {
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+    }
+}
