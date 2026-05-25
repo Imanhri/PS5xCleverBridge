@@ -153,17 +153,19 @@ h2 {
     font-size: 1.2rem;
     text-align: left;
     line-height: 1.8;
+    flex-grow: 1; /* Streckt den Inhalt gleichmäßig */
 }
 
 .content .card img {
     width: 100%;
-    height: auto;
+    height: 220px; /* Feste Höhe passend zu Video-Verhältnissen */
+    object-fit: cover; /* Verhindert Verzerrungen */
     margin-bottom: 15px;
     border-radius: 8px;
 }
 
 .container-highlights {
-    background-image: url(ps5Pattern.png);
+    background-image: url(photos/ps5Pattern.png);
     background-size: cover;
     padding: 40px 0;
     width: 100%;
@@ -179,7 +181,8 @@ h2 {
 .video-container {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; /* 16:9 Aspekt-Verhältnis */
+    padding-bottom: 56.25%;
+    /* 16:9 Aspekt-Verhältnis */
     height: 0;
     overflow: hidden;
     border-radius: 12px;
